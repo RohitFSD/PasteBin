@@ -1,5 +1,5 @@
 import { kv } from "@vercel/kv";
-import { now } from "@/lib/time";
+import { now } from "../../../lib/time";
 
 export default async function PastePage({ params }) {
   const paste = await kv.hgetall(`paste:${params.id}`);
